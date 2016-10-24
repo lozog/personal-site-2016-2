@@ -1,0 +1,26 @@
+
+
+<div id="#entity#list">
+<?		
+	}
+	$bfilters=#entity#_makefilters();
+	$basefilters=$bfilters['filters'];
+
+	$visible=$basefilters['visible'];
+	
+	#entity#_shownavs('#container#','#cmd#');
+		
+	$sqlfilter=#entity#_sqlfilters();
+
+	//remove previous keyword filtering
+
+	//replace pagination:
+<a href=# onclick="nav#entity#_setfilter('#container#','#cmd#','&page=<?echo $page-1;?>'+gid('searchfilter_#entity#').value);return false;">&laquo; Prev</a>
+&nbsp;
+<?echo $page+1;?> of <?echo $maxpage+1;?>
+&nbsp;
+<a href=# onclick="nav#entity#_setfilter('#container#','#cmd#','&page=<?echo $page+1;?>'+gid('searchfilter_#entity#').value);return false;">Next &raquo;</a>
+
+	//replace _inline_lookup#entity# in #entity#s.js:
+	
+		nav#entity#_setfilter('#entity#list','#cmd#',gid('searchfilter_#entity#').value);	
