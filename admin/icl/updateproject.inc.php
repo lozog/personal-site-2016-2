@@ -9,11 +9,13 @@ function updateproject(){
     $startdate=QETSTR('startdate');
     $enddate=QETSTR('enddate');
     $displaydate=QETSTR('displaydate');
+    $ispublic=QETVAL('ispublic');
+    $isfeatured=QETVAL('isfeatured');
 
 
     global $db;
 
-    $query="update projects set projecttitle='$projecttitle',projectdesc='$projectdesc',startdate='$startdate',enddate='$enddate',displaydate='$displaydate' where projectid=$projectid";
+    $query="update projects set projecttitle='$projecttitle',projectdesc='$projectdesc',startdate='$startdate',enddate='$enddate',displaydate='$displaydate',ispublic=$ispublic,isfeatured=$isfeatured where projectid=$projectid";
     sql_query($query,$db);
 
     logaction("updated Project #$projectid <u>$projecttitle</u>",

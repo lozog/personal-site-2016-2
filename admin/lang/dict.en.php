@@ -15,6 +15,8 @@ $dict=array(
 	'project_label_startdate'=>'Start Date',
 	'project_label_enddate'=>'Completion Date',
 	'project_label_displaydate'=>'Display Date',
+	'project_label_ispublic'=>'Public?',
+	'project_label_isfeatured'=>'Featured?',
 		
 	'login'=>'Login',
 	'signin'=>'Sign In',

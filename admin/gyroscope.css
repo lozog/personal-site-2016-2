@@ -202,6 +202,7 @@ font-size:10px;
 
 .inputrow{margin-bottom:10px;}
 
+.oneline{display: inline;}
 
 .stable{overflow:auto;}
 .stable td{padding:0 5px;font-size:12px;}

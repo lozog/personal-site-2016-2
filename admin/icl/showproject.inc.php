@@ -15,7 +15,8 @@ function showproject($projectid=null){
     $startdate=$myrow['startdate'];
     $enddate=$myrow['enddate'];
     $displaydate=$myrow['displaydate'];
-    
+    $ispublic=$myrow['ispublic']+0;
+    $isfeatured=$myrow['isfeatured']+0;
 
     header('newtitle:'.base64_encode($projecttitle));
 ?>
@@ -31,7 +32,8 @@ function showproject($projectid=null){
     </div>
     <div class="inputrow">
         <div class="formlabel"><?tr('project_label_projectdesc');?>:</div>
-        <input class="inpmed" id="projectdesc_<?echo $projectid;?>" value="<?echo htmlspecialchars($projectdesc);?>">
+        <!-- <input class="inpmed" id="projectdesc_<?echo $projectid;?>" value="<?echo htmlspecialchars($projectdesc);?>"> -->
+        <textarea class="inplong" style="height:300px" id="projectdesc_<?echo $projectid;?>"><?echo htmlspecialchars($projectdesc);?></textarea>
     </div>
     <div class="inputrow">
         <div class="formlabel"><?tr('project_label_startdate');?>:</div>
@@ -44,6 +46,14 @@ function showproject($projectid=null){
     <div class="inputrow">
         <div class="formlabel"><?tr('project_label_displaydate');?>:</div>
         <input class="inpmed" id="displaydate_<?echo $projectid;?>" value="<?echo htmlspecialchars($displaydate);?>">
+    </div>
+    <div class="inputrow">
+        <div class="formlabel oneline"><?tr('project_label_ispublic');?></div>
+        <input type="checkbox" id="ispublic_<?echo $projectid;?>" <?if($ispublic) echo 'checked';?> >
+    </div>
+    <div class="inputrow">
+        <div class="formlabel oneline"><?tr('project_label_isfeatured');?></div>
+        <input type="checkbox" id="isfeatured_<?echo $projectid;?>" <?if($isfeatured) echo 'checked';?> >
     </div>
 
     

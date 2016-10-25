@@ -69,6 +69,8 @@ updateproject=function(projectid){
     var ostartdate=gid('startdate_'+suffix);
     var oenddate=gid('enddate_'+suffix);
     var odisplaydate=gid('displaydate_'+suffix);
+    var oispublic=gid('ispublic_'+suffix);
+    var oisfeatured=gid('isfeatured_'+suffix);
 
     
     var valid=1;
@@ -77,9 +79,9 @@ updateproject=function(projectid){
     //delete the excessive validate rules
     if (!valstr(oprojecttitle)) {valid=0; offender=offender||oprojecttitle;}
     if (!valstr(oprojectdesc)) {valid=0; offender=offender||oprojectdesc;}
-    if (!valstr(ostartdate)) {valid=0; offender=offender||ostartdate;}
-    if (!valstr(oenddate)) {valid=0; offender=offender||oenddate;}
-    if (!valstr(odisplaydate)) {valid=0; offender=offender||odisplaydate;}
+    // if (!valstr(ostartdate)) {valid=0; offender=offender||ostartdate;}
+    // if (!valstr(oenddate)) {valid=0; offender=offender||oenddate;}
+    // if (!valstr(odisplaydate)) {valid=0; offender=offender||odisplaydate;}
 
     //add more validation rules
     
@@ -87,6 +89,11 @@ updateproject=function(projectid){
         if (offender&&offender.focus) offender.focus();
         return;
     }
+
+    var ispublic=0;
+    if (oispublic.checked) ispublic=1;
+    var isfeatured=0;
+    if (oisfeatured.checked) isfeatured=1;
     
     var projecttitle=encodeHTML(oprojecttitle.value);
     var projectdesc=encodeHTML(oprojectdesc.value);
@@ -100,6 +107,8 @@ updateproject=function(projectid){
     params.push('startdate='+startdate);
     params.push('enddate='+enddate);
     params.push('displaydate='+displaydate);
+    params.push('ispublic='+ispublic);
+    params.push('isfeatured='+isfeatured);
 
     
     reloadtab('project_'+projectid,oprojecttitle.value,'updateproject&projectid='+projectid,function(){
