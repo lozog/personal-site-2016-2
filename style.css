@@ -1,9 +1,9 @@
 /*
-bg: rgba(34, 34, 34, 1)
-beige:  rgba(230,219,116,1)
-red:    rgba(249,38,114,1)
-blue:   rgba(102,217,239,1)
-off-white: rgba(214,202,188,1)
+bg:         rgba(34, 34, 34, 1)
+beige:      rgba(230,219,116,1)
+red:        rgba(249,38,114,1)
+blue:       rgba(102,217,239,1)
+off-white:  rgba(214,202,188,1)
 
 */
 
@@ -12,6 +12,7 @@ off-white: rgba(214,202,188,1)
     color: #FFFFFF;
     /*font-family: 'PT Sans', sans-serif;*/
     font-family: 'Archivo Black', sans-serif;
+    box-sizing: border-box;
 }
 
 html,body {
@@ -20,24 +21,34 @@ html,body {
     margin: 0;
 }
 
-body {
-    background-image: url("ideas/banner-01.png");
+.section {
+    background-repeat: no-repeat;
+    background-size: 45%;
+    height: 100vh;
+}
+
+#about {
+    background-image: url('img/header.png');
+}
+
+/*body {
+    /*background-image: url("img/header.png");
     background-repeat: no-repeat;
     background-position: left top;
-    /*background-attachment: fixed;*/
-}
+    /*background-attachment: fixed;
+}*/
 
 .maincol {
     /*background: #FFFFFF;*/
     width: 768px;
     margin: 0 auto;
-    height: 2000px;
-    padding: 0 10px;
+    /*height: 2000px;*/
+    padding: 15% 10px 0;
 }
 
 .maincol-content {
-    margin-top: 31%;
-    background: #000000;
+    /*margin-top: 31%;*/
+    /*background: #000000;*/
 }
 
 #sitetitle {
@@ -46,6 +57,10 @@ body {
     /*font-style: italic;*/
     text-decoration: none;
     text-align: right;
+}
+
+.project {
+    background-color: red;
 }
 
 .sectionheader {

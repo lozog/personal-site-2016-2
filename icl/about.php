@@ -1,4 +1,4 @@
-<div id="about" class="section" style="">
+<div id="about" class="section" tyle="">
     <!-- <div id="sitetitle" class="sectionheader">ozog.io</div> -->
     <div class="maincol">
         <div class="maincol-content">

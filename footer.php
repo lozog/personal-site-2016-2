@@ -1,3 +1,3 @@
-    </div> <!-- maincol -->                             <!-- opens in header.php -->
+    <!-- </div>  maincol -->                             <!-- opens in header.php --> 
 </body>
 </html>
